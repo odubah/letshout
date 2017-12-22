@@ -18,7 +18,7 @@ class APITweetRepository implements TweetRepository
             $string = $this->shout($response);
 
         } catch (\Exception $e) {
-            return $e->getMessage();
+            return 'Error: '.Twitter::logs();
         }
 
         return $string;

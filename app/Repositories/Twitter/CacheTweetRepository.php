@@ -3,7 +3,6 @@
 namespace App\Repositories\Twitter;
 
 use Illuminate\Contracts\Cache\Repository as Cache;
-use Illuminate\Support\Facades\Hash;
 
 class CacheTweetRepository implements TweetRepository
 {
