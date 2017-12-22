@@ -11,6 +11,3 @@
 |
 */
 
-Route::get('/', function () {
-    return "let's shout";
-});
