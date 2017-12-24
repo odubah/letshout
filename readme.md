@@ -34,11 +34,13 @@ https://laravel.com/docs/5.5/installation
 ## Installation
 
  * Clone the repository into your server
- * Run composer install inside the main project folder
  * Register your domain on your webserver (either APACHE/ NGinx / local) (sites:
                                                - map: homestead.test
                                                  to: /home/vagrant/code/Laravel/public for Nginx.)
- * Visit yourdomain.com/api/shout using postman so you can get a pretty version of the json response.
+ * Run composer install inside the main project folder                                              
+ * You need to create an application and create your access token in the [Application Management](https://apps.twitter.com/) in twitter. 
+ * create your .env file from .env.example add the values needed from twitter apps (**TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET**) 
+  * Visit yourdomain.com/api/shout using postman so you can get a pretty version of the json response.
  * Pass on two parameters **username**: odubah and **number_of_last_tweets** = 10
  * Example: http://letshout.local/api/shout?username=odubah&number_of_last_tweets=1
  * Have Fun! 
