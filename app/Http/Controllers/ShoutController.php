@@ -20,7 +20,7 @@ class ShoutController extends Controller
 
         $custom_validation_message = [
             'number_of_last_tweets.between' =>
-                'Hi ' . $request->ip() . '! The :attribute must be between :min - :max. You can read more about it here - https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html',
+                'The :attribute must be between :min - :max. You can read more about it here - https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html',
             'number_of_last_tweets.integer' => 'The :attribute value :input is not an integer.'
         ];
 
