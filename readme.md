@@ -1,11 +1,11 @@
 ## Letshout API
 
-This is a very small and simple API that returns any tweet in capitals and adds on an ! mark at the end of the tweet. 
+This is a very small and simple API that returns any tweet in uppercase and adds on an ! mark at the end of the tweet. 
  - For example, a tweet like “Hello this is my first Tweet” will be converted to “HELLO THIS IS MY FIRST TWEET!”.
  
 ## Getting Started
 
-I have chosen Laravel for this development because it uses and takes advantage of some of symfony components such as:
+I have chosen Laravel for this development because it uses and takes advantage of some of the symfony components such as:
 
 - Console, CssSelector, Debug, DomCrawler, Filesystem, Finder, HttpFoundation, HttpKernel, Process, Routing, VarDumper.
 
@@ -16,11 +16,12 @@ but also added two pluses:
 - The Decorator pattern
 - Caching to avoid repeated calls to Twitter’s API. 
 
-Why I have combined the two of them into the project, well think about the "S" in SOLID that stands for Single Responsibility Principle,
+Why I have combined the two of them into the project ?
+ - Well think about the "S" in SOLID that stands for Single Responsibility Principle,
 by doing so we can stack on functionality or decorate it without modifying the original object. That's how the caching is implemented; it is just a
-decorator on our repository so in the future if additional decoration is needed (for example logging) we can implement it easily without the braking existing code.
+decorator in our repository so in the future if additional decoration is needed (for example logging) we can implement it easily without braking the existing code.
 
-The biggest challenge was which design patter I should use to make this fun exercise, what type of framework should I use, apart from understanding the Twitter API errors
+The biggest challenge was which design pattern I should use to do this fun exercise, what type of framework should I use, apart from understanding the Twitter API errors
 and access creation for the purpose of this project.
 
 ### Prerequisites
