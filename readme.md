@@ -1,3 +1,31 @@
+##Letshout API
+
+This is a very small and simple API that return any tweet in capitals and adds on an ! mark at the end. 
+ - For example, a tweet like “Hello this is my first Tweet” would be converted to “HELLO THIS IS MY FIRST TWEET!”.
+ 
+ I have implemented the repository pattern to make the code smoother, flexible and easy to maintain in the long run.
+
+but also adding two pluses:
+
+- the Decorator pattern
+- Caching to avoid repeated calls to Twitter’s API. 
+
+Why I have combined the two of them into the project, well think about the "S" in SOLID that stands for Single Responsibility Principle,
+by doing so we can stack on functionality or decorated without modifying the original object. That's how the caching is implemented is just a
+decorator on our repository so in the future if additional decoration is needed (for example logging) we can implemented easily without braking existing code.
+
+## Installation
+
+ * Copy the repository into your server
+ * Run composer install inside the main project folder
+ * Register your domain on your webserver (sites:
+                                               - map: homestead.test
+                                                 to: /home/vagrant/code/Laravel/public for Nginx.)
+ * Visit yourdomain.com/api/shout using postman so you can get a pretty version of the json response.
+ * Pass on two parameters **username**: odubah and **number_of_last_tweets** = 10
+ * Example: http://letshout.local/api/shout?username=odubah&number_of_last_tweets=1
+ * Have Fun! 
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
