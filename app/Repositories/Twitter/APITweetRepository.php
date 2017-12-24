@@ -11,17 +11,23 @@ class APITweetRepository implements TweetRepository
     {
 
         try {
+            // get account timeline base on user and last tweets
             $response = Twitter::getUserTimeline(
                 ['screen_name' => $request['username'],
                     'count' => $request['number_of_last_tweets'], 'format' => 'array']
             );
-            $string = $this->shout($response);
+            //Return message error if the account has not tweets
+            if(count($response) == 0) {
+                return ['This account has no Tweets to shout'];
+            }
+            //shout our tweet and add the ! mark
+            $tweets = $this->shout($response);
 
         } catch (\Exception $e) {
             return Twitter::logs();
         }
 
-        return $string;
+        return $tweets;
     }
 
     /**
@@ -30,11 +36,13 @@ class APITweetRepository implements TweetRepository
      */
     private function shout($response)
     {
-        $string = array_pluck($response, 'text');
-        $string = array_map(function ($tweet) {
+        //get the text array from the response
+        $tweets = array_pluck($response, 'text');
+        //SHOUT our tweets
+        $tweets = array_map(function ($tweet) {
             return strtoupper($tweet) . '!';
-        }, $string);
-        return $string;
+        }, $tweets);
+        return $tweets;
     }
 
 }

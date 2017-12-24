@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        //Register the repository and apply the decoration on it before is instantiated.
         $this->app->singleton(TweetRepository::class, function(){
             return new CacheTweetRepository(
                 new APITweetRepository,
