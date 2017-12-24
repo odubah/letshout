@@ -35,6 +35,10 @@ decorator on our repository so in the future if additional decoration is needed 
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+---
+Special thanks to <a href="https://github.com/thujohn/twitter">@thujohn</a> and his simple and amazing Twitter library that I have used to communicate with it!
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
