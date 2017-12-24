@@ -3,7 +3,13 @@
 This is a very small and simple API that return any tweet in capitals and adds on an ! mark at the end tweet. 
  - For example, a tweet like “Hello this is my first Tweet” would be converted to “HELLO THIS IS MY FIRST TWEET!”.
  
- I have implemented the repository pattern to make the code smoother, flexible and easy to maintain in the long run.
+## Getting Started
+
+I have chosen Laravel for this development because it uses and takes advantage of some of symfony components such as:
+
+- Console, CssSelector, Debug, DomCrawler, Filesystem, Finder, HttpFoundation, HttpKernel, Process, Routing, VarDumper.
+
+I have implemented the repository pattern to make the code smoother, flexible and easy to maintain in the long run.
 
 but also added two pluses:
 
@@ -14,11 +20,22 @@ Why I have combined the two of them into the project, well think about the "S" i
 by doing so we can stack on functionality or decorated without modifying the original object. That's how the caching is implemented is just a
 decorator on our repository so in the future if additional decoration is needed (for example logging) we can implemented easily without braking existing code.
 
+The biggest challenge was which design patter I should use to make this fun exercise what time of framework should I use, apart from understanding the Twitter API errors
+and access creation for the purpose of this project.
+
+### Prerequisites
+
+What things you need to install the laravel software and how to install them
+
+```
+https://laravel.com/docs/5.5/installation
+```
+
 ## Installation
 
- * Copy the repository into your server
+ * Clone the repository into your server
  * Run composer install inside the main project folder
- * Register your domain on your webserver (sites:
+ * Register your domain on your webserver (either APACHE/ NGinx / local) (sites:
                                                - map: homestead.test
                                                  to: /home/vagrant/code/Laravel/public for Nginx.)
  * Visit yourdomain.com/api/shout using postman so you can get a pretty version of the json response.
@@ -27,6 +44,13 @@ decorator on our repository so in the future if additional decoration is needed 
  * Have Fun! 
  
  Special thanks to <a href="https://github.com/thujohn/twitter">@thujohn</a> and his simple and amazing Twitter library that I have used to communicate with it!
+
+### Running tests
+
+Just go to the root of the project and run the next command so checkout the tests that I have developed
+```
+phpunit tests/Feature/APITest.php
+```
 
 ## Framework used
  
