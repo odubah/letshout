@@ -1,7 +1,7 @@
 ## Letshout API
 
-This is a very small and simple API that return any tweet in capitals and adds on an ! mark at the end tweet. 
- - For example, a tweet like “Hello this is my first Tweet” would be converted to “HELLO THIS IS MY FIRST TWEET!”.
+This is a very small and simple API that returns any tweet in capitals and adds on an ! mark at the end of the tweet. 
+ - For example, a tweet like “Hello this is my first Tweet” will be converted to “HELLO THIS IS MY FIRST TWEET!”.
  
 ## Getting Started
 
@@ -13,14 +13,14 @@ I have implemented the repository pattern to make the code smoother, flexible an
 
 but also added two pluses:
 
-- the Decorator pattern
+- The Decorator pattern
 - Caching to avoid repeated calls to Twitter’s API. 
 
 Why I have combined the two of them into the project, well think about the "S" in SOLID that stands for Single Responsibility Principle,
-by doing so we can stack on functionality or decorated without modifying the original object. That's how the caching is implemented is just a
-decorator on our repository so in the future if additional decoration is needed (for example logging) we can implemented easily without braking existing code.
+by doing so we can stack on functionality or decorate it without modifying the original object. That's how the caching is implemented; it is just a
+decorator on our repository so in the future if additional decoration is needed (for example logging) we can implement it easily without the braking existing code.
 
-The biggest challenge was which design patter I should use to make this fun exercise what time of framework should I use, apart from understanding the Twitter API errors
+The biggest challenge was which design patter I should use to make this fun exercise, what type of framework should I use, apart from understanding the Twitter API errors
 and access creation for the purpose of this project.
 
 ### Prerequisites
